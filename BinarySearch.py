@@ -2,14 +2,14 @@
 import mysql.connector
 
 
-def binsearch(array, first, last, element):
-    if(last >= first):
-        mid = (first+last)//2
-        if(array[mid] > element):
-            return binsearch(array, first, mid-1, element)
-        elif(array[mid] < element):
-            return binsearch(array, mid+1, last, element)
-        elif(array[mid] == element):
+def binsearch(arr, low, high, x):
+    if(low >= high):
+        mid = (low+high)//2
+        if(arr[mid] >x):
+            return binsearch(arr, low, mid-1,x)
+        elif(arr[mid] <x):
+            return binsearch(arr, mid+1, high,x)
+        elif(arr[mid] == x):
             return mid
     else:
         return -1
@@ -23,12 +23,12 @@ rows = cursor.fetchall()
 for row in rows:
     r_no.append(row[0])
 
-array = r_no.copy()
-array.sort()
-element = int(input("Enter the Roll Number you want to search in the database:"))
-result = binsearch(array, 0, len(array)-1, element)
+arr = r_no.copy()
+arr.sort()
+x = int(input("Enter the Roll Number you want to search in the database:"))
+x = binsearch(arr, 0, len(arr)-1, x)
 
-if result != -1:
+if (result!= -1):
     print("The Roll No is found at the position: " + str(result+1) + " in the Database")
 else:
-    print("Sorry the Roll No " + str(element) + " is not found in the Database! ")
+    print("Sorry the Roll No " + str(x) + " is not found in the Database! ")
