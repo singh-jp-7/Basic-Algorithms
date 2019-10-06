@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import mysql.connector
-
-
+import datetime
+a=datetime.datetime.now()
 def binsearch(array, first, last, element):
     if(last >= first):
         mid = (first+last)//2
@@ -32,3 +32,6 @@ if result != -1:
     print("The Roll No is found at the position: " + str(result+1) + " in the Database")
 else:
     print("Sorry the Roll No " + str(element) + " is not found in the Database! ")
+b=datetime.datetime.now()
+c=b-a
+print("The time taken to search a rollno. using binary search= ",c)
