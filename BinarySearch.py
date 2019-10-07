@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-import mysql.connector
+import mysql.connector   
+# package to connect python with mysql database
 
 
-def binsearch(arr, low, high, x):
+def binsearch(arr, low, high, x):    # user defined Function for binarysearch
     if(low >= high):
         mid = (low+high)//2
         if(arr[mid] >x):
