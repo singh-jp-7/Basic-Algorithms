@@ -2,13 +2,13 @@
 import mysql.connector
 
 
-def binsearch(arr, low, high, x):
-    if(low >= high):
-        mid = (low+high)//2
+def binarysearch(arr, left, right, x):
+    if(left >= right):
+        mid = (left+right)//2
         if(arr[mid] >x):
-            return binsearch(arr, low, mid-1,x)
+            return binarysearch(arr, left, mid-1,x)
         elif(arr[mid] <x):
-            return binsearch(arr, mid+1, high,x)
+            return binarysearch(arr, mid+1, right,x)
         elif(arr[mid] == x):
             return mid
     else:
@@ -26,7 +26,7 @@ for row in rows:
 arr = r_no.copy()
 arr.sort()
 x = int(input("Enter the Roll Number you want to search in the database:"))
-x = binsearch(arr, 0, len(arr)-1, x)
+x = binarysearch(arr, 0, len(arr)-1, x)
 
 if (result!= -1):
     print("The Roll No is found at the position: " + str(result+1) + " in the Database")
