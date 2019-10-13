@@ -27,6 +27,9 @@ def mergeSort(arr):
             arr[k] = L[i] 
             i+=1
             k+=1
+            
+            
+            
           
         while j < len(R): 
             arr[k] = R[j] 
@@ -50,7 +53,7 @@ for row in rows:
     r_no.append(row[0])
 
 arr = r_no.copy()
-print("The sorted Class Roll numbers from the database are as follows: \n")
+print("The sorted Class Roll numbers for given student from the database are as follows: \n")
 mergeSort(arr)
 printList(arr)
 b = datetime.datetime.now()
