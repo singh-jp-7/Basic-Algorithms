@@ -3,6 +3,9 @@ import mysql.connector
 import datetime
 a = datetime.datetime.now()
 def mergeSort(arr): 
+    
+    """Function for merge sort"""
+    
     if len(arr) >1: 
         mid = len(arr)//2  
         L = arr[:mid] 
@@ -35,10 +38,13 @@ def mergeSort(arr):
 
 
 def printList(arr): 
+    
+    """Function to print the data"""
+    
     for i in range(len(arr)):         
         print(arr[i]) 
     
-
+"""Fetching the data from the database"""
 
 sql = "select class_roll_no from data"
 con = mysql.connector.connect(user="*****", password="**********", host="127.0.0.1", database="students")
