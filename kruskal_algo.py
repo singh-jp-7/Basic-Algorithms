@@ -33,6 +33,8 @@ class GRAPH:
 			rank[xroot] += 1
 
 	def kruskal(self):
+		
+	"""Function for finding the minimum cost spanning tree"""
 
 		result =[]
 		i = 0
