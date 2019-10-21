@@ -4,7 +4,7 @@ import mysql.connector
 
 def binsearch(arr, low, high, x):
     
-    """Function for Binary Search"""
+    """Function used in Binary Search"""
     
     if(low >= high):
         mid = (low+high)//2
@@ -17,7 +17,7 @@ def binsearch(arr, low, high, x):
     else:
         return -1
     
-"""fetching the data from the database"""
+"""Fetching data from the Database"""
 
 sql = "select roll_no from data"
 con = mysql.connector.connect(user="*****", password="********", host="127.0.0.1", database="students")
