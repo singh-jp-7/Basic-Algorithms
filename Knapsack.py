@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+"""This program uses the greedy approach to solve the knapsack problem"""
 import mysql.connector
 import datetime
 capacity=int(input("Enter the capacity of your knapsack:\n"))
