@@ -2,7 +2,10 @@
 import mysql.connector
 import datetime
 a = datetime.datetime.now()
-def partition(arr,low,high): 
+def partition(arr,low,high):
+    
+    """Function to divide in two halves"""
+    
     i = ( low-1 )     
     pivot = arr[high]     
   
@@ -18,6 +21,9 @@ def partition(arr,low,high):
     return ( i+1 ) 
   
 def quickSort(arr,low,high): 
+    
+    #Function to quick sort
+    
     if low < high: 
   
         
