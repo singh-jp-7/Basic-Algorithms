@@ -1,4 +1,9 @@
+#The knapsack problem is: Given a set of items, each with a weight and a value,
+#determine the number of each item to include in a collection
+#the total weight is less than or equal to a given limit and the total value is as large as possible.
+
 #!/usr/bin/python3
+
 import mysql.connector
 import datetime
 capacity=int(input("Enter the capacity of your knapsack:\n"))
